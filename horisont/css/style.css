@@ -288,7 +288,11 @@ article h2 {
 
     .land-billede {
         display: none;
-    }    
+    } 
+    
+    h2 {
+        text-align: center;
+    }
 }
 
 /*MEDIA QUERY TABLET AND ABOVE*/

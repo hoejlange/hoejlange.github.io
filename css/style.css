@@ -1,0 +1,409 @@
+header h1 {
+    color: #ffffff;
+    font-size: 48px;
+}
+
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*Styling til responsiv navigationsbar fra https://github.com/itaddiction/responsivenav/blob/master/css/flexnav.css */
+
+header {
+    background: grey;
+    width: 100%;
+    padding: 0 20px;
+}
+
+#logo-burger {
+    display: flex;
+    align-items: center;
+    margin-left: .5em;
+}
+
+#logo {
+    font-size: 2em;
+    line-height: 2em;
+    margin-top: .4em;
+}
+
+#logo a,
+#main-nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+#main-nav a:hover {
+    color: #88d8b0;
+}
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*Styling til body*/
+
+
+   
+}
+
+.velkommen {
+    text-align: center;
+}
+
+.container-book {
+    background-color: #F7E1D7;
+    padding: .5em;
+    text-align: center;
+}
+
+.container-book h2 {
+    padding: .5em;
+    text-align: center;
+}
+
+.container-book #book-link {
+    text-decoration: none;
+    color: #F5853F;
+    border: solid;
+    border-color: #F5853F;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+footer .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer .info {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*styling til rejsemaal på forside og rejsemaal.html*/
+
+.container-rejsemaal {
+    margin: 10px;
+    display: grid;
+    grid-gap: .2em;
+    text-align: center;
+}
+
+.container-rejsemaal-index {
+width: 100%;
+}
+
+
+.vietnam {
+    background-color: #E6D3A3;
+    color: #FFF;
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.vietnam a {
+    text-decoration: none;
+    color: #FFFF;
+}
+
+.sri-lanka {
+    background-color: #7A8450;
+    color: #FFF;
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.jordan {
+    background-color: #D3B88C;
+    color: #FFF;
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.marokko {
+    background-color: #F7E1D7;
+    color: #FFF;
+    padding: 20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*styling til om-os.html*/
+
+.om {
+    margin: 10px;
+    display: grid;
+    grid-gap: .4em;
+}
+
+article {
+    text-align: left;
+    padding: 20px;
+    background-color: #F7E1D7;
+    
+}
+
+article h1 {
+    text-align: center;
+}
+
+article h2 {
+    text-align: center;
+}
+
+.image {
+    background-color: #E6D3A3;
+
+}
+
+.image #dreng {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.egen-guide {
+    background-color: #7A8450;
+    color: #FFF;
+    padding: 20px;
+
+
+}
+
+.kundetilfredshed {
+    background-color: #D3B88C;
+    color: #FFF;
+    padding: 20px;
+
+
+}
+
+
+
+/*MEDIA QUERY MOBILE */
+
+@media all and (max-width: 599px) {
+
+    /*HEADER NAV*/
+    header {
+        display: block;
+    }
+
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    #toggle:checked + #main-nav {
+        display: block;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    #main-nav a {
+        margin: 0;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+    /*main*/
+
+    .velkommen {
+        grid-column: 1 / -1;
+    }
+
+
+    .container-rejsemaal-index {
+        display: none;
+    }
+
+    .forsidebillede {
+        display: none;
+    }
+
+    .tekst {
+        display: none;
+    }
+
+    .land-billede {
+        display: none;
+    }    
+}
+
+/*MEDIA QUERY TABLET AND ABOVE*/
+
+@media all and (min-width: 600px) {
+
+    /*HEADER NAV*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #logo-burger {
+        margin: 0;
+    }
+
+    #logo {
+        margin-top: .2em;
+    }
+
+    #main-nav {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+
+    #main-nav a {
+        margin: 0 .5em;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+
+    /*CARD LAYOUT*/
+    .card {
+        flex: 0 1 31%;
+    }
+    .forsidebillede {
+        display: none;
+    }
+
+    .grid-container {
+        width: 100%;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2(1fr);
+        grid-template-rows: auto auto auto;
+    }
+    
+    
+    .land-billede {
+    width:100%;
+        height:auto;
+    }
+    
+
+
+}
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media all and (min-width: 1024px) {
+
+    /*HEADER*/
+    header {
+        flex-direction: row;
+    }
+    .forsidebillede {
+    display: block;
+    margin-left: auto;
+        margin-right: auto; }
+
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2(1fr);
+        grid-template-rows: auto auto auto;
+
+    }
+    
+        .vietnam {
+    flex-direction: row;
+}
+
+.sri-lanka {
+    flex-direction: row;
+}
+
+.jordan {
+    flex-direction: row;
+}
+
+.marokko {
+    flex-direction: row;
+}
+    
+    footer {
+        flex-direction: row;
+        align-content: center;
+    }
+    footer .footer-logo {
+    margin-left: 50px;
+    margin-top:30px;
+}
+
+footer .info {
+    margin-right: 30px;
+}
+
+}
+
